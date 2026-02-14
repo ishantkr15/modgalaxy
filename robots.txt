@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /details.html
+
+Sitemap: https://asmultiverse.modgalaxy.in/sitemap.xml
+
+# AS Multiverse - Educational Apps & MOD APKs
+# Domain: asmultiverse.modgalaxy.in
+# Contact: https://www.instagram.com/as_multiverse.official
