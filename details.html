@@ -319,91 +319,103 @@
                              data-ad-format="fluid"
                              data-ad-client="ca-pub-6608561504651468"
                              data-ad-slot="5502069969"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  </div>
-  </div>
+                    </div>
+                </div>
 
-  ${app.description ? `
-  <div class="app-description">
-    <h2><i class="fas fa-info-circle"></i> Description</h2>
-    <p>${app.description}</p>
-  </div>` : ''}
+                ${app.description ? `
+                <div class="app-description">
+                    <h2><i class="fas fa-info-circle"></i> Description</h2>
+                    <p>${app.description}</p>
+                </div>` : ''}
 
-  <div class="app-developer">
-    <h2><i class="fas fa-user"></i> Developer Info</h2>
-    <p><strong>Developer:</strong> ${app.developer || 'MadXABhi'}</p>
-    <p><strong>Category:</strong> ${app.category}</p>
-    <p><strong>Size:</strong> ${app.size}</p>
-  </div>
+                <div class="app-developer">
+                    <h2><i class="fas fa-user"></i> Developer Info</h2>
+                    <p><strong>Developer:</strong> ${app.developer || 'MadXABhi'}</p>
+                    <p><strong>Category:</strong> ${app.category}</p>
+                    <p><strong>Size:</strong> ${app.size}</p>
+                </div>
 
-  <!-- Ad: Before Footer -->
-  <div class="ad-container">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6608561504651468" data-ad-slot="5157427363"
-      data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
-    <script>
-                         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-  `;
-  }
+                <!-- Ad: Before Footer -->
+                <div class="ad-container">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-6608561504651468"
+                         data-ad-slot="5157427363"
+                         data-ad-format="fluid"
+                         data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
+                </div>
+            `;
 
-  function showError(message) {
-  const container = document.getElementById('app-detail-content');
-  container.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> ${message}</div>`;
-  }
+      // Initialize ads after content is added to DOM with a slight delay
+      setTimeout(() => {
+        try {
+          const adElements = container.querySelectorAll('.adsbygoogle');
+          adElements.forEach(el => {
+            if (!el.getAttribute('data-adsbygoogle-status')) {
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+          });
+        } catch (e) {
+          console.error("AdSense initialization error:", e);
+        }
+      }, 500);
+    }
 
-  function openModal(src) {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  modal.style.display = 'flex';
-  modalImg.src = src;
-  }
+    function showError(message) {
+      const container = document.getElementById('app-detail-content');
+      container.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> ${message}</div>`;
+    }
 
-  function closeModal() {
-  document.getElementById('imageModal').style.display = 'none';
-  }
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
 
-  function shareApp() {
-  if (navigator.share) {
-  navigator.share({
-  title: currentApp ? currentApp.title : 'AS Multiverse',
-  text: currentApp ? `Check out ${currentApp.title} on AS Multiverse!` : 'Check out AS Multiverse!',
-  url: window.location.href
-  });
-  } else {
-  navigator.clipboard.writeText(window.location.href);
-  alert('Link copied to clipboard!');
-  }
-  }
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
 
-  // Drawer functions
-  function toggleDrawer() {
-  const drawer = document.getElementById('drawer');
-  if (drawer.classList.contains('active')) closeDrawer();
-  else openDrawerNav();
-  }
-  function openDrawerNav() {
-  document.getElementById('drawer').classList.add('active');
-  document.getElementById('drawer-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-  }
-  function closeDrawer() {
-  document.getElementById('drawer').classList.remove('active');
-  document.getElementById('drawer-overlay').classList.remove('active');
-  document.body.style.overflow = 'auto';
-  }
+    function shareApp() {
+      if (navigator.share) {
+        navigator.share({
+          title: currentApp ? currentApp.title : 'AS Multiverse',
+          text: currentApp ? `Check out ${currentApp.title} on AS Multiverse!` : 'Check out AS Multiverse!',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link copied to clipboard!');
+      }
+    }
 
-  // Menu toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
-  });
+    // Drawer functions
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      if (drawer.classList.contains('active')) closeDrawer();
+      else openDrawerNav();
+    }
+    function openDrawerNav() {
+      document.getElementById('drawer').classList.add('active');
+      document.getElementById('drawer-overlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      document.getElementById('drawer').classList.remove('active');
+      document.getElementById('drawer-overlay').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
 
-  document.addEventListener('DOMContentLoaded', loadAppDetails);
+    // Menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', loadAppDetails);
   </script>
 </body>
 
