@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
     <loc>https://apps.asmultiverse.in/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Apps -->
   <url>
     <loc>https://apps.asmultiverse.in/details.html?id=5eb393ee95fab7468a79d2853</loc>
     <lastmod>2026-02-27</lastmod>
