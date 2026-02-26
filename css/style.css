@@ -3581,6 +3581,15 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
     overflow: hidden;
+    clear: both;
+}
+
+/* Ensure AdSense units have visibility and space */
+.adsbygoogle {
+    display: block !important;
+    margin: 0 auto;
+    min-height: 90px;
+    height: auto !important;
 }
 
 .ad-container:hover {
