@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608561504651468"
-     crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,8 +15,7 @@
   <meta name="keywords"
     content="as multiverse, as multiverse app, asmultivers, as multiverse store, asmultiverse, as multiverse token, asmultiverse.com, as multiverse pw, as multiverse website, as multiverse for pc, apps.asmultiverse.in, as multiverse download, as multiverse apk, as multiverse apk download, as multiverse apk download latest version, as multiverse store app, as multiverse next toppers, as multiverse next toppers apk, as multiverse careerwill, as multiverse kgs, as multiverse pc, as multiverse rwa login, as multiverse rwa token, as multiverse pw physics wallah, as multiverse app store, pw multiverse, pw multiverse apk, pw as multiverse app, multiverse pw, multiverse apk, multiverse app, ms multiverse apk, rwa mod apk, career will mod apk, selection way mod apk, mod apk download, educational app, free study app, pw mod apk, physics wallah mod apk, vidyakul mod apk, kd live mod apk, study iq mod apk, next toppers mod apk, khan global studies mod apk">
   <meta name="author" content="MadXABhi">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <link rel="canonical" href="https://apps.asmultiverse.in/details.html">
+  <meta name="googlebot" content="index, follow">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="icon" href="https://i.postimg.cc/CMHx2j5f/20231013_112419.jpg" type="image/jpeg">
   <meta property="og:type" content="website">
@@ -109,6 +106,15 @@
   <div class="image-modal" id="imageModal" onclick="closeModal()">
     <span class="close-modal">&times;</span>
     <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Top Ad -->
+  <div class="ad-container" style="margin-top: 80px; margin-bottom: 20px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6608561504651468" data-ad-slot="9256454475"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
 
   <section class="app-details-section">
@@ -304,83 +310,101 @@
                             <span>More Apps</span>
                         </button>`}
                     </div>
-                </div>
+                    
+                    <!-- Ad: Inside Banner -->
+                    <div class="ad-container" style="margin: 10px auto; border: none; background: transparent;">
+                        <ins class="adsbygoogle"
+                             style="display:block; text-align:center;"
+                             data-ad-layout="in-article"
+                             data-ad-format="fluid"
+                             data-ad-client="ca-pub-6608561504651468"
+                             data-ad-slot="5502069969"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </div>
+  </div>
 
+  ${app.description ? `
+  <div class="app-description">
+    <h2><i class="fas fa-info-circle"></i> Description</h2>
+    <p>${app.description}</p>
+  </div>` : ''}
 
+  <div class="app-developer">
+    <h2><i class="fas fa-user"></i> Developer Info</h2>
+    <p><strong>Developer:</strong> ${app.developer || 'MadXABhi'}</p>
+    <p><strong>Category:</strong> ${app.category}</p>
+    <p><strong>Size:</strong> ${app.size}</p>
+  </div>
 
+  <!-- Ad: Before Footer -->
+  <div class="ad-container">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6608561504651468" data-ad-slot="5157427363"
+      data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"></ins>
+    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  `;
+  }
 
-                ${app.description ? `
-                <div class="app-description">
-                    <h2><i class="fas fa-info-circle"></i> Description</h2>
-                    <p>${app.description}</p>
-                </div>` : ''}
+  function showError(message) {
+  const container = document.getElementById('app-detail-content');
+  container.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> ${message}</div>`;
+  }
 
-                <div class="app-developer">
-                    <h2><i class="fas fa-user"></i> Developer Info</h2>
-                    <p><strong>Developer:</strong> ${app.developer || 'MadXABhi'}</p>
-                    <p><strong>Category:</strong> ${app.category}</p>
-                    <p><strong>Size:</strong> ${app.size}</p>
-                </div>
-            `;
-    }
+  function openModal(src) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  modal.style.display = 'flex';
+  modalImg.src = src;
+  }
 
-    function showError(message) {
-      const container = document.getElementById('app-detail-content');
-      container.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> ${message}</div>`;
-    }
+  function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+  }
 
-    function openModal(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      modal.style.display = 'flex';
-      modalImg.src = src;
-    }
+  function shareApp() {
+  if (navigator.share) {
+  navigator.share({
+  title: currentApp ? currentApp.title : 'AS Multiverse',
+  text: currentApp ? `Check out ${currentApp.title} on AS Multiverse!` : 'Check out AS Multiverse!',
+  url: window.location.href
+  });
+  } else {
+  navigator.clipboard.writeText(window.location.href);
+  alert('Link copied to clipboard!');
+  }
+  }
 
-    function closeModal() {
-      document.getElementById('imageModal').style.display = 'none';
-    }
+  // Drawer functions
+  function toggleDrawer() {
+  const drawer = document.getElementById('drawer');
+  if (drawer.classList.contains('active')) closeDrawer();
+  else openDrawerNav();
+  }
+  function openDrawerNav() {
+  document.getElementById('drawer').classList.add('active');
+  document.getElementById('drawer-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+  document.getElementById('drawer').classList.remove('active');
+  document.getElementById('drawer-overlay').classList.remove('active');
+  document.body.style.overflow = 'auto';
+  }
 
-    function shareApp() {
-      if (navigator.share) {
-        navigator.share({
-          title: currentApp ? currentApp.title : 'AS Multiverse',
-          text: currentApp ? `Check out ${currentApp.title} on AS Multiverse!` : 'Check out AS Multiverse!',
-          url: window.location.href
-        });
-      } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert('Link copied to clipboard!');
-      }
-    }
+  // Menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  });
 
-    // Drawer functions
-    function toggleDrawer() {
-      const drawer = document.getElementById('drawer');
-      if (drawer.classList.contains('active')) closeDrawer();
-      else openDrawerNav();
-    }
-    function openDrawerNav() {
-      document.getElementById('drawer').classList.add('active');
-      document.getElementById('drawer-overlay').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer() {
-      document.getElementById('drawer').classList.remove('active');
-      document.getElementById('drawer-overlay').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    document.addEventListener('DOMContentLoaded', loadAppDetails);
+  document.addEventListener('DOMContentLoaded', loadAppDetails);
   </script>
 </body>
 
 </html>
-
