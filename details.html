@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6608561504651468"
+    crossorigin="anonymous"></script>
+
   <title>App Details - AS Multiverse | Download Free Educational MOD APKs</title>
   <meta name="description"
-    content="Download this premium educational app for free from AS Multiverse. Get the latest MOD APK with all features unlocked. Trusted by 500K+ students.">
+    content="Download this premium educational app for free from AS Multiverse. Get the latest version with all features unlocked. Trusted by 500K+ students at apps.asmultiverse.in">
   <meta name="keywords"
-    content="as multiverse, asmultivers, asmultiverse, as multiverse app, as multiverse apk, as multiverse download, as multiverse pw, mod apk download, educational app, free study app, asmultiverse.modgalaxy.in, pw mod apk, vidyakul mod apk, kd live mod apk, study iq mod apk, next toppers mod apk, khan global studies mod apk">
+    content="as multiverse, as multiverse app, asmultivers, as multiverse store, asmultiverse, as multiverse token, asmultiverse.com, as multiverse pw, as multiverse website, as multiverse for pc, apps.asmultiverse.in, as multiverse download, as multiverse apk, as multiverse apk download, as multiverse apk download latest version, as multiverse store app, as multiverse next toppers, as multiverse next toppers apk, as multiverse careerwill, as multiverse kgs, as multiverse pc, as multiverse rwa login, as multiverse rwa token, as multiverse pw physics wallah, as multiverse app store, pw multiverse, pw multiverse apk, pw as multiverse app, multiverse pw, multiverse apk, multiverse app, ms multiverse apk, rwa mod apk, career will mod apk, selection way mod apk, mod apk download, educational app, free study app, pw mod apk, physics wallah mod apk, vidyakul mod apk, kd live mod apk, study iq mod apk, next toppers mod apk, khan global studies mod apk">
   <meta name="author" content="MadXABhi">
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://asmultiverse.modgalaxy.in/details.html">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://apps.asmultiverse.in/details.html">
   <link rel="icon" href="https://i.postimg.cc/CMHx2j5f/20231013_112419.jpg" type="image/jpeg">
   <meta property="og:type" content="website">
-  <meta property="og:url" id="og-url" content="https://asmultiverse.modgalaxy.in/details.html">
+  <meta property="og:url" id="og-url" content="https://apps.asmultiverse.in/details.html">
   <meta property="og:title" id="og-title" content="Download App - AS Multiverse">
   <meta property="og:description" id="og-desc" content="Get this premium educational app for free from AS Multiverse.">
   <meta property="og:image" id="og-image" content="https://i.postimg.cc/CMHx2j5f/20231013_112419.jpg">
@@ -130,12 +135,19 @@
     </div>
   </section>
 
+  <!-- Ad: After App Details -->
+  <div class="ad-container">
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w"
+      data-ad-client="ca-pub-6608561504651468" data-ad-slot="7626019470"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
   <div class="glowing-divider"></div>
 
   <footer class="footer">
     <div class="footer-content">
       <span class="footer-icon">🚀</span>
-      <p>© AS MULTIVERSE | 2022-25 | Developer: <span class="developer">MadXAbhi</span></p>
+      <p>© AS MULTIVERSE | 2022-26 | Developer: <span class="developer">MadXAbhi</span></p>
     </div>
   </footer>
 
@@ -173,11 +185,70 @@
         // Dynamic SEO meta updates
         document.querySelector('meta[name="description"]').content = `Download ${currentApp.title} (${currentApp.subtitle}) for free from AS Multiverse. Version ${currentApp.version}, Size: ${currentApp.size}. ${currentApp.description || ''}`;
         document.getElementById('og-title').content = `${currentApp.title} - Free Download | AS Multiverse`;
-        document.getElementById('og-desc').content = `Download ${currentApp.title} MOD APK v${currentApp.version} for free. ${currentApp.downloads} downloads. Trusted by AS Multiverse.`;
+        document.getElementById('og-desc').content = `Download ${currentApp.title} v${currentApp.version} for free. ${currentApp.downloads} downloads. Trusted by AS Multiverse.`;
         document.getElementById('og-image').content = currentApp.icon;
-        document.getElementById('og-url').content = `https://asmultiverse.modgalaxy.in/details.html?id=${currentApp._id}`;
+        document.getElementById('og-url').content = `https://apps.asmultiverse.in/details.html?id=${currentApp._id}`;
         document.getElementById('tw-title').content = `${currentApp.title} - AS Multiverse`;
-        document.getElementById('tw-desc').content = `Download ${currentApp.title} MOD APK free from AS Multiverse.`;
+        document.getElementById('tw-desc').content = `Download ${currentApp.title} free from AS Multiverse.`;
+
+        // Dynamic canonical URL for each app
+        document.querySelector('link[rel="canonical"]').href = `https://apps.asmultiverse.in/details.html?id=${currentApp._id}`;
+
+        // Dynamic meta keywords for each app
+        if (currentApp.seoKeywords) {
+          document.querySelector('meta[name="keywords"]').content += ', ' + currentApp.seoKeywords;
+        }
+
+        // Inject SoftwareApplication JSON-LD structured data
+        const appSchema = {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": currentApp.title,
+          "description": currentApp.description || `Download ${currentApp.title} for free from AS Multiverse`,
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Android",
+          "softwareVersion": currentApp.version,
+          "fileSize": currentApp.size,
+          "url": `https://apps.asmultiverse.in/details.html?id=${currentApp._id}`,
+          "image": currentApp.icon,
+          "author": {
+            "@type": "Organization",
+            "name": "AS Multiverse",
+            "url": "https://apps.asmultiverse.in"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": currentApp.downloads ? currentApp.downloads.replace(/[^0-9]/g, '') || "1000" : "1000",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        };
+        const schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        schemaScript.textContent = JSON.stringify(appSchema);
+        document.head.appendChild(schemaScript);
+
+        // Inject BreadcrumbList JSON-LD for app page
+        const breadcrumbSchema = {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apps.asmultiverse.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://apps.asmultiverse.in/#apps" },
+            { "@type": "ListItem", "position": 3, "name": currentApp.title, "item": `https://apps.asmultiverse.in/details.html?id=${currentApp._id}` }
+          ]
+        };
+        const breadcrumbScript = document.createElement('script');
+        breadcrumbScript.type = 'application/ld+json';
+        breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+        document.head.appendChild(breadcrumbScript);
+
         renderAppDetails(currentApp);
 
       } catch (error) {
@@ -220,22 +291,20 @@
                             <i class="fas fa-download"></i>
                             <span>Download APK</span>
                         </button>` : ''}
+                        ${app.studyUrl && app.studyUrl.trim() ? `
+                        <button class="app-btn app-btn-secondary" onclick="window.open('${app.studyUrl}', '_blank')" style="flex:1;">
+                            <i class="fas fa-book-open"></i>
+                            <span>Let's Study</span>
+                        </button>` : `
                         <button class="app-btn app-btn-secondary" onclick="window.location.href='index.html#apps'" style="flex:1;">
                             <i class="fas fa-th-large"></i>
                             <span>More Apps</span>
-                        </button>
+                        </button>`}
                     </div>
                 </div>
 
-                ${app.screenshot ? `
-                <div class="app-screenshots">
-                    <h2><i class="fas fa-images"></i> Screenshots</h2>
-                    <div class="screenshots-grid">
-                        ${app.screenshot.screenshot1 ? `<img src="${app.screenshot.screenshot1}" alt="Screenshot 1" onclick="openModal(this.src)">` : ''}
-                        ${app.screenshot.screenshot2 ? `<img src="${app.screenshot.screenshot2}" alt="Screenshot 2" onclick="openModal(this.src)">` : ''}
-                        ${app.screenshot.screenshot3 ? `<img src="${app.screenshot.screenshot3}" alt="Screenshot 3" onclick="openModal(this.src)">` : ''}
-                    </div>
-                </div>` : ''}
+
+
 
                 ${app.description ? `
                 <div class="app-description">
