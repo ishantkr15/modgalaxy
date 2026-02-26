@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /data/
 
 Sitemap: https://apps.asmultiverse.in/sitemap.xml
 
